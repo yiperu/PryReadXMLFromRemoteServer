@@ -4,10 +4,32 @@
               android:layout_width="fill_parent"
               android:layout_height="fill_parent"
         >
+    <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="49dp"
+            android:src="@drawable/apps4s"
+            android:id="@+id/idImgvCabecera"
+            />
     <TextView
+            android:id="@+id/idTxtvTitulo"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="Hello World, MainActivity"
             />
+    <EditText
+            android:id="@+id/idEdtUrl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New EditText"
+            android:layout_gravity="center"/>
+    <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="New Button"
+            android:id="@+id/idBtnSend"/>
+    <ListView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/idLstvDatos"/>
 </LinearLayout>
 
