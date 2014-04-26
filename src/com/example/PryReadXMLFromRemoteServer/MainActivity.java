@@ -3,11 +3,17 @@ package com.example.PryReadXMLFromRemoteServer;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import org.xmlpull.v1.XmlPullParser;
+import org.xmlpull.v1.XmlPullParserException;
+import org.xmlpull.v1.XmlPullParserFactory;
 
+import java.io.IOException;
+import java.net.MalformedURLException;
 import java.net.URL;
 
 public class MainActivity extends Activity implements View.OnClickListener{
@@ -26,6 +32,10 @@ public class MainActivity extends Activity implements View.OnClickListener{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(policy);
+
+
         //------------------------------
         editTextUrl = (EditText)findViewById(R.id.idEdtUrl);
         buttonSend = (Button)findViewById(R.id.idBtnSend);
@@ -34,8 +44,33 @@ public class MainActivity extends Activity implements View.OnClickListener{
         buttonSend.setOnClickListener(this);
 
 
-        url = new URL();
-        leerXML();
+        try {
+            url = new URL("http://apps4s.com/cursos.xml");
+            leerXML();
+        } catch (MalformedURLException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
+
+
+    }
+
+    private void leerXML() {
+        XmlPullParserFactory factory;
+        XmlPullParser xml;
+
+        int evento;
+
+        try {
+            factory = XmlPullParserFactory.newInstance();
+            xml = factory.newPullParser();
+            xml.setInput(url.openStream(),"UTF-8");
+
+            evento = xml.getEventType();
+        } catch (XmlPullParserException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
     }
 
