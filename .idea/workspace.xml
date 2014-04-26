@@ -31,7 +31,7 @@
     <file path="/DetalleActivity.java" changelist="b02d35f6-fdab-4039-a453-9552207989f7" time="1398531715515" ignored="false" />
     <file path="/Dummy.txt" changelist="b02d35f6-fdab-4039-a453-9552207989f7" time="1398531174083" ignored="false" />
     <file path="/activity_detalle.xml" changelist="b02d35f6-fdab-4039-a453-9552207989f7" time="1398531695257" ignored="false" />
-    <file path="/MainActivity.java" changelist="b02d35f6-fdab-4039-a453-9552207989f7" time="1398533524678" ignored="false" />
+    <file path="/MainActivity.java" changelist="b02d35f6-fdab-4039-a453-9552207989f7" time="1398535688250" ignored="false" />
     <file path="/main.xml" changelist="b02d35f6-fdab-4039-a453-9552207989f7" time="1398532143531" ignored="false" />
     <file path="$PROJECT_DIR$/gen/com/example/PryReadXMLFromRemoteServer/R.java" changelist="b02d35f6-fdab-4039-a453-9552207989f7" time="1398533773649" ignored="false" />
     <file path="$PROJECT_DIR$/gen/com/example/PryReadXMLFromRemoteServer/BuildConfig.java" changelist="b02d35f6-fdab-4039-a453-9552207989f7" time="1398533779228" ignored="false" />
@@ -98,25 +98,7 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/example/PryReadXMLFromRemoteServer/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="30" selection-start="1832" selection-end="1832" vertical-scroll-proportion="0.4822485">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="4" selection-start="281" selection-end="281" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DetalleActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/PryReadXMLFromRemoteServer/DetalleActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="49" selection-start="458" selection-end="458" vertical-scroll-proportion="0.0">
+            <state line="56" column="42" selection-start="1928" selection-end="1928" vertical-scroll-proportion="0.35207102">
               <folding />
             </state>
           </provider>
@@ -128,7 +110,16 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="38" selection-start="1113" selection-end="1113" vertical-scroll-proportion="-7.48">
+            <state line="12" column="51" selection-start="485" selection-end="485" vertical-scroll-proportion="-4.08">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DetalleActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/example/PryReadXMLFromRemoteServer/DetalleActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="57" selection-start="459" selection-end="459" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -140,7 +131,16 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="0" selection-start="261" selection-end="261" vertical-scroll-proportion="-2.38">
+            <state line="4" column="83" selection-start="207" selection-end="207" vertical-scroll-proportion="-1.36">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="78" selection-start="166" selection-end="166" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -165,8 +165,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="335" />
-    <option name="y" value="40" />
+    <option name="x" value="417" />
     <option name="width" value="1290" />
     <option name="height" value="699" />
   </component>
@@ -439,6 +438,23 @@
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="all">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="b02d35f6-fdab-4039-a453-9552207989f7" name="Default" comment="" />
@@ -448,7 +464,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="335" y="40" width="1290" height="699" extended-state="0" />
+    <frame x="417" y="0" width="1290" height="699" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980457" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -549,9 +565,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/PryReadXMLFromRemoteServer/DetalleActivity.java">
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="49" selection-start="458" selection-end="458" vertical-scroll-proportion="0.0">
+        <state line="2" column="78" selection-start="166" selection-end="166" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -561,7 +577,14 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="261" selection-end="261" vertical-scroll-proportion="-2.38">
+        <state line="4" column="83" selection-start="207" selection-end="207" vertical-scroll-proportion="-1.36">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/PryReadXMLFromRemoteServer/DetalleActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="57" selection-start="459" selection-end="459" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -571,21 +594,14 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="38" selection-start="1113" selection-end="1113" vertical-scroll-proportion="-7.48">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="4" selection-start="281" selection-end="281" vertical-scroll-proportion="0.0">
+        <state line="12" column="51" selection-start="485" selection-end="485" vertical-scroll-proportion="-4.08">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/PryReadXMLFromRemoteServer/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="30" selection-start="1832" selection-end="1832" vertical-scroll-proportion="0.4822485">
+        <state line="56" column="42" selection-start="1928" selection-end="1928" vertical-scroll-proportion="0.35207102">
           <folding />
         </state>
       </provider>
