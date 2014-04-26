@@ -5,10 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ListView;
+import android.widget.*;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 import org.xmlpull.v1.XmlPullParserFactory;
@@ -18,7 +15,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 
-public class MainActivity extends Activity implements View.OnClickListener{
+public class MainActivity extends Activity implements View.OnClickListener, AdapterView.OnItemClickListener{
     /**
      * Called when the activity is first created.
      */
@@ -28,6 +25,10 @@ public class MainActivity extends Activity implements View.OnClickListener{
     // Datos necesario para obtener datos del WS
     private URL url=null;
     private String[] titulares=null;
+    // El Objeto ElCurso:
+    private ArrayList<ElCurso> losCursos;
+
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -43,11 +44,14 @@ public class MainActivity extends Activity implements View.OnClickListener{
         buttonSend = (Button)findViewById(R.id.idBtnSend);
         listViewDatos = (ListView)findViewById(R.id.idLstvDatos);
 
+        losCursos = new ArrayList<ElCurso>();
+
         buttonSend.setOnClickListener(this);
+        listViewDatos.setOnItemClickListener(this);
 
 
         try {
-            url = new URL("http://apps4s.com/cursos.xml");
+            url = new URL("http://apps4s.com/android-xml/cursos.xml");
             leerXML();
         } catch (MalformedURLException e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
@@ -62,12 +66,28 @@ public class MainActivity extends Activity implements View.OnClickListener{
         XmlPullParser xml;
 
         int evento;
-        // Ahora aqui empezaremos a parsear el archivo XML:
+        // Creamos los Flags de cada etiqueta:
         boolean titulo;  // Flag para verificar si esta empezando un TAG titulo
-        ArrayList<String> titulos;  // Array donde guardaremos los titulos
+        boolean precio;
+        boolean imagen;
+        boolean detalle;
 
-        titulo = false;  // Inicializamos con false
-        titulos = new ArrayList<String>();  // Inicializamos nuestro arreglo
+        ArrayList<String> titulos;  // Array donde guardaremos los titulos
+        ArrayList<String> precios;
+        ArrayList<String> imagenes;
+        ArrayList<String> detalles;
+
+        // Inicializamos los Flag a false
+        titulo  = false;  // Inicializamos con false
+        precio  = false;
+        imagen  = false;
+        detalle = false;
+
+        // Inicializamos nuestro arreglo
+        titulos = new ArrayList<String>();
+        precios = new ArrayList<String>();
+        imagenes = new ArrayList<String>();
+        detalles = new ArrayList<String>();
 
         try {
             factory = XmlPullParserFactory.newInstance();
@@ -82,15 +102,43 @@ public class MainActivity extends Activity implements View.OnClickListener{
                         if (xml.getName().equals("titulo")) {
                             titulo=true;
                         }
+                        if (xml.getName().equals("precio")) {
+                            precio=true;
+                        }
+                        if (xml.getName().equals("imagen")) {
+                            imagen=true;
+                        }
+                        if (xml.getName().equals("detalle")) {
+                            detalle=true;
+                        }
                         break;
+
                     case XmlPullParser.TEXT:
                         if (titulo==true) {
                             titulos.add(xml.getText());
+                        }
+                        if (precio==true) {
+                            precios.add(xml.getText());
+                        }
+                        if (imagen==true) {
+                            imagenes.add(xml.getText());
+                        }
+                        if (detalle==true) {
+                            detalles.add(xml.getText());
                         }
                         break;
                     case XmlPullParser.END_TAG:
                         if (xml.getName().equals("titulo")) {
                             titulo=false;
+                        }
+                        if (xml.getName().equals("precio")) {
+                            precio=false;
+                        }
+                        if (xml.getName().equals("imagen")) {
+                            imagen=false;
+                        }
+                        if (xml.getName().equals("detalle")) {
+                            detalle=false;
                         }
                         break;
                 }
@@ -98,6 +146,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
             }
             titulares = new String[titulos.size()];
             for (int i=0;i<titulos.size();i++) {
+                losCursos.add(new ElCurso(titulos.get(i),detalles.get(i),imagenes.get(i),precios.get(i)));
                 titulares[i] = titulos.get(i);
             }
 
@@ -119,5 +168,12 @@ public class MainActivity extends Activity implements View.OnClickListener{
             default:
                 break;
         }
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        Intent intent = new Intent(MainActivity.this,DetalleActivity.class);
+        intent.putExtra("CURSO",losCursos.get(position));
+        startActivity(intent);
     }
 }
